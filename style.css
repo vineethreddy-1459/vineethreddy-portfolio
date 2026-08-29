@@ -1,3 +1,4 @@
+
 /* =====================================================
    GLOBAL
 ===================================================== */
@@ -75,12 +76,20 @@ button {
     box-shadow:
         0 0 20px var(--red),
         0 0 50px rgba(255, 0, 0, 0.4);
+
+    /* Important */
+    flex-shrink: 0;
 }
 
 .loader-logo img {
     width: 100%;
     height: 100%;
+
+    /* FIX */
     object-fit: cover;
+    object-position: center;
+
+    border-radius: 50%;
 }
 
 .loader h2 {
@@ -174,6 +183,9 @@ button {
         0 0 25px rgba(255, 0, 0, 0.25);
 
     transition: 0.3s;
+
+    /* Important */
+    flex-shrink: 0;
 }
 
 .brand-logo:hover {
@@ -187,7 +199,12 @@ button {
 .brand-logo img {
     width: 100%;
     height: 100%;
+
+    /* FIX */
     object-fit: cover;
+    object-position: center;
+
+    border-radius: 50%;
 }
 
 .brand-name span {
@@ -248,7 +265,6 @@ nav a.active::after {
     border-radius: 50%;
 
     cursor: pointer;
-
     transition: 0.3s;
 }
 
@@ -399,7 +415,6 @@ nav a.active::after {
 }
 
 
-
 /* =====================================================
    HERO BUTTONS
 ===================================================== */
@@ -545,41 +560,6 @@ nav a.active::after {
     transform: translateY(-3px);
 }
 
-/* =====================================================
-   SOCIAL
-===================================================== */
-
-.social-links {
-    display: flex;
-    gap: 12px;
-
-    margin-top: 30px;
-}
-
-.social-links a {
-    width: 44px;
-    height: 44px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border: 1px solid #333;
-
-    transition: 0.3s;
-}
-
-.social-links a:hover {
-    color: var(--red);
-
-    border-color: var(--red);
-
-    box-shadow:
-        0 0 15px rgba(255, 0, 0, 0.35);
-
-    transform: translateY(-3px);
-}
-
 
 /* =====================================================
    HERO VISUAL
@@ -589,7 +569,9 @@ nav a.active::after {
     width: 48%;
 
     display: flex;
+
     justify-content: center;
+
     align-items: center;
 
     position: relative;
@@ -602,7 +584,9 @@ nav a.active::after {
     position: relative;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 }
 
@@ -659,7 +643,9 @@ nav a.active::after {
 @keyframes pulse {
     50% {
         transform: scale(1.03);
-        box-shadow: 0 0 50px rgba(255, 0, 0, 0.4);
+
+        box-shadow:
+            0 0 50px rgba(255, 0, 0, 0.4);
     }
 }
 
@@ -689,6 +675,9 @@ nav a.active::after {
     z-index: 5;
 
     animation: floating 4s ease-in-out infinite;
+
+    /* Important */
+    overflow: hidden;
 }
 
 .spider-logo-circle {
@@ -698,13 +687,20 @@ nav a.active::after {
     border-radius: 50%;
 
     overflow: hidden;
+
+    /* Important */
+    position: relative;
 }
 
 .spider-logo-circle img {
     width: 100%;
     height: 100%;
 
+    /* FIX */
     object-fit: cover;
+    object-position: center;
+
+    border-radius: 50%;
 }
 
 @keyframes floating {
@@ -1036,6 +1032,11 @@ nav a.active::after {
     color: var(--red);
 }
 
+
+/* =====================================================
+   PROFILE LOGO
+===================================================== */
+
 .profile-logo {
     width: 130px;
     height: 130px;
@@ -1050,13 +1051,20 @@ nav a.active::after {
 
     box-shadow:
         0 0 25px rgba(255, 0, 0, 0.4);
+
+    /* Important */
+    position: relative;
 }
 
 .profile-logo img {
     width: 100%;
     height: 100%;
 
+    /* FIX */
     object-fit: cover;
+    object-position: center;
+
+    border-radius: 50%;
 }
 
 .profile-card h3 {
@@ -1164,6 +1172,7 @@ nav a.active::after {
     height: 48px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -1194,6 +1203,7 @@ nav a.active::after {
 
 .skill-line {
     width: 100%;
+
     height: 3px;
 
     background: #222;
@@ -1265,6 +1275,7 @@ nav a.active::after {
     height: 55px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -1348,13 +1359,13 @@ nav a.active::after {
 
 /* =====================================================
    JOURNEY
-   FIXED — WIDE HORIZONTAL TEXT
 ===================================================== */
 
 .timeline {
     position: relative;
 
     width: 100%;
+
     max-width: 1150px;
 
     margin: 0 auto;
@@ -1362,25 +1373,21 @@ nav a.active::after {
     padding-left: 75px;
 }
 
-
-/* Vertical line */
-
 .timeline::before {
     content: "";
 
     position: absolute;
 
     left: 25px;
+
     top: 0;
+
     bottom: 0;
 
     width: 1px;
 
     background: #333;
 }
-
-
-/* Timeline item */
 
 .timeline-item {
     position: relative;
@@ -1394,20 +1401,20 @@ nav a.active::after {
     margin: 0;
 }
 
-
-/* Number circle */
-
 .timeline-item > span {
     position: absolute;
 
     left: -75px;
+
     top: 0;
 
     width: 50px;
     height: 50px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     background: #080808;
@@ -1430,20 +1437,15 @@ nav a.active::after {
     transition: 0.3s;
 }
 
-
-/* Content area */
-
 .timeline-item > div {
     width: 100%;
+
     max-width: 1000px;
 
     padding: 0;
 
     min-width: 0;
 }
-
-
-/* Category */
 
 .timeline-item small {
     display: block;
@@ -1459,9 +1461,6 @@ nav a.active::after {
     margin-bottom: 10px;
 }
 
-
-/* Heading */
-
 .timeline-item h3 {
     font-family: "Orbitron", sans-serif;
 
@@ -1474,13 +1473,11 @@ nav a.active::after {
     color: var(--white);
 }
 
-
-/* Paragraph */
-
 .timeline-item p {
     display: block;
 
     width: 100%;
+
     max-width: 950px;
 
     color: #999;
@@ -1497,9 +1494,6 @@ nav a.active::after {
 
     word-break: normal;
 }
-
-
-/* Timeline hover */
 
 .timeline-item:hover > span {
     transform: scale(1.08);
@@ -1585,7 +1579,9 @@ nav a.active::after {
 }
 
 
-/* FORM */
+/* =====================================================
+   FORM
+===================================================== */
 
 #contactForm {
     background: var(--card);
@@ -1694,6 +1690,7 @@ footer {
     display: flex;
 
     justify-content: center;
+
     align-items: center;
 
     gap: 12px;
@@ -1708,6 +1705,16 @@ footer {
 .footer-brand .brand-logo {
     width: 42px;
     height: 42px;
+}
+
+.footer-brand .brand-logo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 50%;
 }
 
 .footer-brand > span > span {
@@ -1739,6 +1746,7 @@ footer > p {
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     border: 1px solid #333;
@@ -1803,6 +1811,41 @@ footer small {
 
 
 /* =====================================================
+   GLOBAL IMAGE FIX
+===================================================== */
+
+/*
+   Important:
+   Square image -> circular container
+*/
+
+img {
+    display: block;
+
+    max-width: 100%;
+}
+
+
+/* All circular logos */
+
+.loader-logo img,
+.brand-logo img,
+.spider-logo-circle img,
+.profile-logo img,
+.footer-brand .brand-logo img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 50%;
+}
+
+
+/* =====================================================
    RESPONSIVE
 ===================================================== */
 
@@ -1841,6 +1884,7 @@ footer small {
 
     .tagline {
         border-left: none;
+
         border-bottom: 2px solid var(--red);
 
         padding: 0 0 7px;
@@ -1874,6 +1918,7 @@ footer small {
         position: absolute;
 
         top: 72px;
+
         right: 20px;
 
         width: 220px;
@@ -1881,6 +1926,7 @@ footer small {
         padding: 20px;
 
         display: none;
+
         flex-direction: column;
 
         background: #090909;
@@ -1902,11 +1948,13 @@ footer small {
 
     .hero {
         padding-left: 20px;
+
         padding-right: 20px;
     }
 
     .hero h1 {
         font-size: 48px;
+
         letter-spacing: -2px;
     }
 
@@ -1920,11 +1968,13 @@ footer small {
 
     .hud {
         width: 330px;
+
         height: 330px;
     }
 
     .spider-core {
         width: 190px;
+
         height: 190px;
     }
 
@@ -1963,76 +2013,21 @@ footer small {
     .scroll-indicator {
         display: none;
     }
+
+    /* Mobile logo safety */
+    .loader-logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .brand-logo {
+        width: 42px;
+        height: 42px;
+    }
+
+    .profile-logo {
+        width: 120px;
+        height: 120px;
+    }
 }
 
-
-/* =====================================================
-   IMAGE / LOGO FIX
-   Added to ensure portfolio logos display correctly
-   on local hosting and GitHub Pages.
-===================================================== */
-
-img {
-    display: block;
-    max-width: 100%;
-}
-
-/* Loader logo */
-.loader-logo,
-.loader-logo img {
-    display: block;
-}
-
-.loader-logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-/* Navbar logo */
-.brand-logo,
-.brand-logo img {
-    display: block;
-}
-
-.brand-logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-/* Main hero logo */
-.spider-logo-circle,
-.spider-logo-circle img {
-    display: block;
-}
-
-.spider-logo-circle img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-/* Profile logo */
-.profile-logo,
-.profile-logo img {
-    display: block;
-}
-
-.profile-logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-/* Footer logo */
-.footer-brand .brand-logo,
-.footer-brand .brand-logo img {
-    display: block;
-}
-
-.footer-brand .brand-logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
