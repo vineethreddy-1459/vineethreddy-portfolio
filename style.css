@@ -1964,3 +1964,75 @@ footer small {
         display: none;
     }
 }
+
+
+/* =====================================================
+   IMAGE / LOGO FIX
+   Added to ensure portfolio logos display correctly
+   on local hosting and GitHub Pages.
+===================================================== */
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Loader logo */
+.loader-logo,
+.loader-logo img {
+    display: block;
+}
+
+.loader-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Navbar logo */
+.brand-logo,
+.brand-logo img {
+    display: block;
+}
+
+.brand-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Main hero logo */
+.spider-logo-circle,
+.spider-logo-circle img {
+    display: block;
+}
+
+.spider-logo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Profile logo */
+.profile-logo,
+.profile-logo img {
+    display: block;
+}
+
+.profile-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Footer logo */
+.footer-brand .brand-logo,
+.footer-brand .brand-logo img {
+    display: block;
+}
+
+.footer-brand .brand-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
